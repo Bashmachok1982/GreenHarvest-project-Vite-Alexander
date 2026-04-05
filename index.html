@@ -4,51 +4,657 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/GreenHarvest-project-Vite-Alexander/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>GreenHarvest</title>
     <script type="module" crossorigin src="/GreenHarvest-project-Vite-Alexander/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/GreenHarvest-project-Vite-Alexander/assets/index-C9Z8tvtb.css">
+    <link rel="modulepreload" crossorigin href="/GreenHarvest-project-Vite-Alexander/assets/vendor-B6BarXCG.js">
+    <link rel="stylesheet" crossorigin href="/GreenHarvest-project-Vite-Alexander/assets/vendor-DfleYA46.css">
+    <link rel="stylesheet" crossorigin href="/GreenHarvest-project-Vite-Alexander/assets/index-Ig956F7u.css">
   </head>
   <body>
     <header class="header">
   <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="img/sprite.svg#logo"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+    <a href="./" class="logo">
+      <img
+        src="data:image/webp;base64,UklGRgAEAABXRUJQVlA4WAoAAAAQAAAA1wAAEwAAQUxQSJ0DAAAB8FZte9Zs27YtEuKgkYADcFAcgAPqIJsDJKwSkLBKqIRIiIT5Rz5oexzHef6NiAn4K/AOeuWcPWi63D3q/0LqWRlgkwOc/7fYjem43K8tNvbUXxtHGlwV0uikmFI6OkdKU2dJaeusKa2dPaXUial/TNKR0tLbU1qURqdqMXdPUdKehpevBaOdX5UzmF+SMoOmyOimBWBpZdg6CbxjYK1QgKW1MJrjCd6JwCxGN2nKtC3IGU5voER5NeustpGYAXIB+LsDyy/k8CM7gH+CvAJLa4esOzEDJQP4rTDPc5Dic9tmKTy37alRA1KQ4gUsjU2Swl7AG5v61UP9BulHHC6YBlRPF7BlSC2Hs/FQ36DMUryAJTwej8cbzsfj8Qj67gIcajr4iJSg/ECB+BMRrgPSHanAmaA0IhBvvcEkKQCnaoek+uXuJkVzv6JiSukIAwZZ7R0IQzvwAwn8Jwy2ACXccjgDsFQ7vHUrg1ea5zneoZ51AlxygGOgwNFpjxi8G0dshtYSm6EVMrw+8I7tq5chyuF5J2TY5HBWb9haS2wGyYD3FjR6zypvpV4A5ntHjDFOf8Da6Hqray2tUMK94cYOJj3Be7Fe35ClJ5QgRSC2uibFQu1p+bHYWbw9VX2f9QtyOL/n8JRCganTLRakUGCTTrh0T9ErIG+3citVputGAJ6Sdtrz0BXVulJza52pufZigeVWTu13K0KWpBPSjXKoPsGlDFvnTM1V9XS+K3jdiUdKsxT2lI6gaGZn7KnAIenp7l5gqmzbtpQhh9amfvVQv6UX5FuutrUMipmZQwmtbdsOK/BXLUCYIKvz0N24ZyDf+bKDqwuEapOkUCD9iN7w+lJm9NlSvQBBkhy2E+wDi7s/VTtwZzGzM2oyszMonmZnHFiAtfUC14BOyL+yQPnODiU3C/iQChxVAnvD/IEJSI30gQxwyQEOnQDXgBzKS1J4AdvQDjx+RCf1psnMwiccDjUnYBpy8CpAgawPqEB5SooZ/A61t5Ks8pGYgeLvApwaisDR6Hujn0ZCbi3A4wMRiC05pKETSpAkBzgH+kkrQPYMMP+W4kX31JgK+K9o/Y6Bq3tACSMLsFRLFT+iV6ZdVt0p1aWr2pSqa0iaT8/ZU1R9mC2t3cyiThtMCja6KppZS8nMFkUzC1rNUmc325TM1l4wsymaWUunWapkZkltG10lxd3fOV9HUPswWxuLmZ1RMaV0SCGllOKN/9kBAFZQOCA8AAAAUAQAnQEq2AAUAD6RSKBMpaQjIiEoALASCWkAAAi1ErVq1atY/SBPRAs0AAD+9/DhnQG7ubWAy1inWAAA"
+        alt="GreenHarvest-logo"
+        width="216"
+        height="20"
+      />
+    </a>
+
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li class="main-nav-item">
+          <a class="main-nav-link" href="#order">How It Works</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        <li class="main-nav-item">
+          <a class="main-nav-link" href="#vegetables">Vegetables</a>
+        </li>
+        <li class="main-nav-item">
+          <a class="main-nav-link" href="#reviews">Reviews</a>
         </li>
       </ul>
+      <a href="#contact" class="header-btn">Shop now</a>
     </nav>
+
+    <button
+      class="burger-menu-button"
+      type="button"
+      aria-label="Відкрити меню навігації"
+      id="burger-menu-button"
+    >
+      <svg
+        class="burger-menu-icon burger-menu-icon-burger"
+        width="32"
+        height="32"
+        fill="none"
+        stroke="#fbfbfb"
+      >
+        <use href="/GreenHarvest-project-Vite-Alexander/assets/icons-Bc0hXAbD.svg#icon-Burger"></use>
+      </svg>
+    </button>
   </div>
 </header>
 
 
     <main>
-      <!-- Loads the specified .html file -->
+      <section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">organic vegetables to your diet today!</h1>
+      <p class="hero-text">
+        Our expertly curated vegetable baskets are made with the freshest,
+        highest quality vegetables available. Fresh Harvest Box has got you
+        covered. Fresh, high-quality vegetables in expertly curated vegetable
+        baskets delivered to you.
+      </p>
+    </div>
+
+    <div class="hero-image"></div>
+  </div>
+</section>
+
+      <section class="order" id="order">
+  <!-- Розовый блок с картинкой -->
+  <div class="order-image-wrap">
+    <picture>
+      <!-- Desktop ≥ 1280px -->
+      <source
+        media="(min-width: 1280px)"
+        srcset="/GreenHarvest-project-Vite-Alexander/assets/order-desktop-1x-CM3T8rSG.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/order-desktop-2x-BhQEzfJ4.webp 2x"
+      />
+      <!-- Tablet 768–1279px -->
+      <source
+        media="(min-width: 768px)"
+        srcset="/GreenHarvest-project-Vite-Alexander/assets/order-tablet-1x-Cb-v_JsP.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/order-tablet-2x-DTozyiZJ.webp 2x"
+      />
+      <!-- Mobile — fallback -->
+      <img
+        class="order-image"
+        src="/GreenHarvest-project-Vite-Alexander/assets/order-mobile-1x-7mnix9Uv.webp"
+        srcset="/GreenHarvest-project-Vite-Alexander/assets/order-mobile-1x-7mnix9Uv.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/order-mobile-2x-BDuSul2G.webp 2x"
+        alt="Woman preparing vegetables"
+        loading="lazy"
+      />
+    </picture>
+  </div>
+
+  <!-- Зелёный блок с контентом -->
+  <div class="order-content-wrap">
+    <div class="container">
+      <div class="order-content">
+        <h2 class="order-title">
+          To order your
+          <span class="order-title-accent">vegetable</span>
+          basket, simply follow these
+          <span class="order-title-accent">easy steps</span>
+        </h2>
+
+        <p class="order-text">
+          Our baskets are assembled with care and delivered straight to your
+          doorstep, so you can enjoy the taste of fresh fruit without ever
+          leaving your home.
+        </p>
+
+        <ul class="order-steps">
+          <li class="order-step">
+            <div class="order-step-number">1</div>
+            <p class="order-step-text">
+              Just choose <strong>the vegetable</strong> you want to order by
+              clicking on the checkboxes <strong>next to it.</strong>
+            </p>
+          </li>
+          <li class="order-step">
+            <div class="order-step-number">2</div>
+            <p class="order-step-text">
+              Click on <strong>the basket</strong> and fill out the form.
+            </p>
+          </li>
+          <li class="order-step">
+            <div class="order-step-number">3</div>
+            <p class="order-step-text">
+              Sit back and relax! Your <strong>fresh vegetables</strong> basket
+              will be delivered.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="advertisment">
+  <div class="container">
+    <h1 class="advertisment-title">
+      <span class="advertisment-span">Discount up to 40%!</span> Taste the
+      vitamins and keep your health
+    </h1>
+  </div>
+</section>
+
+      <section class="vegetables" id="vegetables">
+  <div class="container">
+    <h1 class="vegetables-title">
+      organic <span class="vegetables-span">vegetables</span>
+    </h1>
+    <p class="vegetables-text">
+      Our organic vegetables are hand-picked from local farms and delivered
+      straight to your doorstep, ensuring that you get the freshest and most
+      nutritious produce possible.
+    </p>
+    <ul class="vegetables-list">
+      <!-- Eggplant -->
+      <li class="vegetables-card">
+        <a
+          class="vegetables-lightbox-link glightbox"
+          href="/img/webp/vegetables/eggplant/eggplant-desktop-lightbox.webp"
+          data-gallery="vegetables"
+          data-title="Eggplant — 60 USD / kg"
+          data-description="Fresh organic eggplant, hand-picked from local farms."
+          aria-label="Open eggplant photo"
+        >
+          <h2 class="vegetables-subtitle">eggplant</h2>
+          <p class="vegetables-desc">60 USD / kg</p>
+          <div class="vegetables-img">
+            <picture>
+              <source
+                media="(min-width: 1280px)"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/eggplant-desktop-1x-BkhT_uFQ.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/eggplant-desktop-2x-BFJnZTSC.webp 2x"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/eggplant-tablet-1x-Cmi9hWU2.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/eggplant-tablet-2x-ruX2Oecd.webp 2x"
+              />
+              <img
+                class="vegetables-image"
+                src="/GreenHarvest-project-Vite-Alexander/assets/eggplant-mobile-1x-BWFn7UT5.webp"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/eggplant-mobile-1x-BWFn7UT5.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/eggplant-mobile-2x-Cx6J5fXf.webp 2x"
+                alt="eggplant"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <span class="vegetables-zoom-hint">🔍 View photo</span>
+        </a>
+      </li>
+
+      <!-- Leek -->
+      <li class="vegetables-card">
+        <a
+          class="vegetables-lightbox-link glightbox"
+          href="/img/webp/vegetables/leek/leek-desktop-lightbox.webp"
+          data-gallery="vegetables"
+          data-title="Leek — 50 USD / kg"
+          data-description="Fresh organic leek, hand-picked from local farms."
+          aria-label="Open leek photo"
+        >
+          <h2 class="vegetables-subtitle">leek</h2>
+          <p class="vegetables-desc">50 USD / kg</p>
+          <div class="vegetables-img">
+            <picture>
+              <source
+                media="(min-width: 1280px)"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/leek-desktop-1x-CAjseVxf.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/leek-desktop-2x-B9ttRRq2.webp 2x"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/leek-tablet-1x-CDpYYc1w.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/leek-tablet-2x-BtLU-sS1.webp 2x"
+              />
+              <img
+                class="vegetables-image"
+                src="/GreenHarvest-project-Vite-Alexander/assets/leek-mobile-1x-C2IIaUJY.webp"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/leek-mobile-1x-C2IIaUJY.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/leek-mobile-2x-Bqd_JuwM.webp 2x"
+                alt="leek"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <span class="vegetables-zoom-hint">🔍 View photo</span>
+        </a>
+      </li>
+
+      <!-- Mushrooms -->
+      <li class="vegetables-card">
+        <a
+          class="vegetables-lightbox-link glightbox"
+          href="/img/webp/vegetables/mushrooms/mushrooms-desktop-lightbox.webp"
+          data-gallery="vegetables"
+          data-title="Mushrooms — 40 USD / kg"
+          data-description="Fresh organic mushrooms, hand-picked from local farms."
+          aria-label="Open mushrooms photo"
+        >
+          <h2 class="vegetables-subtitle">mushrooms</h2>
+          <p class="vegetables-desc">40 USD / kg</p>
+          <div class="vegetables-img">
+            <picture>
+              <source
+                media="(min-width: 1280px)"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/mushrooms-desktop-1x-CkAj5R3m.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/mushrooms-desktop-2x-Cs6jPxWs.webp 2x"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/mushrooms-tablet-1x-1NTli6jn.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/mushrooms-tablet-2x-BdU7JgRD.webp 2x"
+              />
+              <img
+                class="vegetables-image"
+                src="/GreenHarvest-project-Vite-Alexander/assets/mushrooms-mobile-1x-CD5Lb29t.webp"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/mushrooms-mobile-1x-CD5Lb29t.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/mushrooms-mobile-2x-Dw3WMkWw.webp 2x"
+                alt="mushrooms"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <span class="vegetables-zoom-hint">🔍 View photo</span>
+        </a>
+      </li>
+
+      <!-- Corn -->
+      <li class="vegetables-card">
+        <a
+          class="vegetables-lightbox-link glightbox"
+          href="/img/webp/vegetables/corn/corn-desktop-lightbox.webp"
+          data-gallery="vegetables"
+          data-title="Corn — 60 USD / kg"
+          data-description="Fresh organic corn, hand-picked from local farms."
+          aria-label="Open corn photo"
+        >
+          <h2 class="vegetables-subtitle">corn</h2>
+          <p class="vegetables-desc">60 USD / kg</p>
+          <div class="vegetables-img">
+            <picture>
+              <source
+                media="(min-width: 1280px)"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/corn-desktop-1x-DguZd8yy.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/corn-desktop-2x-DhOLzG6A.webp 2x"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/corn-tablet-1x-B9ELwI60.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/corn-tablet-2x-Ce8oT2Ln.webp 2x"
+              />
+              <img
+                class="vegetables-image"
+                src="/GreenHarvest-project-Vite-Alexander/assets/corn-mobile-1x-DMSXf8fs.webp"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/corn-mobile-1x-DMSXf8fs.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/corn-mobile-2x-cvz72zxA.webp 2x"
+                alt="corn"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <span class="vegetables-zoom-hint">🔍 View photo</span>
+        </a>
+      </li>
+
+      <!-- Sweet Potatoes -->
+      <li class="vegetables-card">
+        <a
+          class="vegetables-lightbox-link glightbox"
+          href="/img/webp/vegetables/potatoes/potatoes-desktop-lightbox.webp"
+          data-gallery="vegetables"
+          data-title="Sweet Potatoes — 50 USD / kg"
+          data-description="Fresh organic sweet potatoes, hand-picked from local farms."
+          aria-label="Open sweet potatoes photo"
+        >
+          <h2 class="vegetables-subtitle">sweet potatoes</h2>
+          <p class="vegetables-desc">50 USD / kg</p>
+          <div class="vegetables-img">
+            <picture>
+              <source
+                media="(min-width: 1280px)"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/potatoes-desktop-1x-BTd0WhfY.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/potatoes-desktop-2x-UYE9ppHw.webp 2x"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/potatoes-tablet-1x-SC7ElKNe.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/potatoes-tablet-2x-CbsTo2DW.webp 2x"
+              />
+              <img
+                class="vegetables-image"
+                src="/GreenHarvest-project-Vite-Alexander/assets/potatoes-mobile-1x-DB2bIAOq.webp"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/potatoes-mobile-1x-DB2bIAOq.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/potatoes-mobile-2x-5Yb7jJ7-.webp 2x"
+                alt="sweet potatoes"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <span class="vegetables-zoom-hint">🔍 View photo</span>
+        </a>
+      </li>
+
+      <!-- Carrot -->
+      <li class="vegetables-card">
+        <a
+          class="vegetables-lightbox-link glightbox"
+          href="/img/webp/vegetables/carrot/carrot-desktop-lightbox.webp"
+          data-gallery="vegetables"
+          data-title="Carrot — 40 USD / kg"
+          data-description="Fresh organic carrots, hand-picked from local farms."
+          aria-label="Open carrot photo"
+        >
+          <h2 class="vegetables-subtitle">carrot</h2>
+          <p class="vegetables-desc">40 USD / kg</p>
+          <div class="vegetables-img">
+            <picture>
+              <source
+                media="(min-width: 1280px)"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/carrot-desktop-1x-C4aIsbB8.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/carrot-desktop-2x-hBZZpA8i.webp 2x"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/carrot-tablet-1x-CRPqsg-r.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/carrot-tablet-2x-BnuZwvUg.webp 2x"
+              />
+              <img
+                class="vegetables-image"
+                src="/GreenHarvest-project-Vite-Alexander/assets/carrot-mobile-1x-BiWn_wIC.webp"
+                srcset="/GreenHarvest-project-Vite-Alexander/assets/carrot-mobile-1x-BiWn_wIC.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/carrot-mobile-2x-B3o2Kakl.webp 2x"
+                alt="carrot"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <span class="vegetables-zoom-hint">🔍 View photo</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="reviews" id="reviews">
+  <div class="container">
+    <h2 class="reviews-title">
+      Reviews from<br />
+      our <span class="reviews-title-accent">customers</span>
+    </h2>
+    <p class="reviews-text">
+      Words of our customers: impressions and opinions about the quality of our
+      services and the freshness of our products.
+    </p>
+
+    <ul class="reviews-list">
+      <li class="reviews-item">
+        <img
+          class="reviews-avatar"
+          src="data:image/webp;base64,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"
+          alt="John Wax"
+          width="80"
+          height="80"
+          loading="lazy"
+        />
+        <h3 class="reviews-name">John Wax</h3>
+        <p class="reviews-comment">
+          These vegetables are my secret to delicious and healthy meals. The
+          quality is always at the highest level, the aroma and taste are
+          enchanting. I advise every fan of real products!
+        </p>
+      </li>
+      <li class="reviews-item">
+        <img
+          class="reviews-avatar"
+          src="data:image/webp;base64,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"
+          alt="Victoria Romashenko"
+          width="80"
+          height="80"
+          loading="lazy"
+        />
+        <h3 class="reviews-name">Victoria Romashenko</h3>
+        <p class="reviews-comment">
+          I love how fast and fresh the vegetables are delivered. Salads always
+          turn out so appetizing, and soups are real masterpieces. The quality
+          is impeccable!
+        </p>
+      </li>
+      <li class="reviews-item">
+        <img
+          class="reviews-avatar"
+          src="data:image/webp;base64,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"
+          alt="Ihor Trachuk"
+          width="80"
+          height="80"
+          loading="lazy"
+        />
+        <h3 class="reviews-name">Ihor Trachuk</h3>
+        <p class="reviews-comment">
+          Recently tried my fresh tomatoes and peppers - amazing! The
+          authenticity of the taste, as if from the garden directly to my table.
+          It is now my main vegetable supplier.
+        </p>
+      </li>
+    </ul>
+    <div class="reviews-dots">
+      <button class="reviews-dot is-active" aria-label="Відгук 1"></button>
+      <button class="reviews-dot" aria-label="Відгук 2"></button>
+      <button class="reviews-dot" aria-label="Відгук 3"></button>
+    </div>
+  </div>
+</section>
+
+      <section class="contact" id="contact">
+  <div class="container">
+    <h2 class="contact-title">
+      Fresh <span class="contact-title-accent">harvest</span> box<br />
+      has got you covered
+    </h2>
+
+    <p class="contact-text">
+      Our boxes are packed with delicious, nutritious vegetables, perfect for
+      anyone looking to eat healthier or support local farmers. Order your box
+      today and start enjoying the best that nature has to offer!
+    </p>
+
+    <div class="contact-wrap">
+      <!-- Белый блок — форма -->
+      <div class="contact-form-wrap">
+        <p class="contact-form-title">
+          Ordering <span class="contact-form-accent-red">from us</span> is quick
+          and easy! Fill out
+          <span class="contact-form-accent-green">the form</span>
+          below and we will contact you!
+        </p>
+
+        <form class="contact-form" action="#" method="post">
+          <input
+            class="contact-input"
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            minlength="2"
+            maxlength="50"
+            pattern="[A-Za-zА-Яа-яІіЇїЄє\s'-]+"
+            required
+          />
+          <input
+            class="contact-input"
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            class="contact-input contact-textarea"
+            name="comment"
+            placeholder="Comment"
+            minlength="10"
+            maxlength="500"
+          ></textarea>
+          <button class="contact-btn" type="submit" disabled>Send</button>
+        </form>
+      </div>
+
+      <!-- Розовый блок — фото + соцсети -->
+      <div class="contact-social-wrap">
+        <picture>
+          <!-- Desktop ≥ 1280px -->
+          <source
+            media="(min-width: 1280px)"
+            srcset="/GreenHarvest-project-Vite-Alexander/assets/contact-desktop-1x-CzJTYVxP.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/contact-desktop-2x-wz19H5PJ.webp 2x"
+          />
+          <!-- Tablet 768–1279px -->
+          <source
+            media="(min-width: 768px)"
+            srcset="/GreenHarvest-project-Vite-Alexander/assets/contact-tablet-1x-CE2G8nuY.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/contact-tablet-2x-pzvrdOy3.webp 2x"
+          />
+          <!-- Mobile — fallback -->
+          <img
+            class="contact-image"
+            src="/GreenHarvest-project-Vite-Alexander/assets/contact-mobile-1x-HwZpkUP0.webp"
+            srcset="/GreenHarvest-project-Vite-Alexander/assets/contact-mobile-1x-HwZpkUP0.webp 1x, /GreenHarvest-project-Vite-Alexander/assets/contact-mobile-2x-Ca3ndZy_.webp 2x"
+            alt="Woman preparing vegetables"
+            loading="lazy"
+          />
+        </picture>
+
+        <div class="contact-social">
+          <p class="contact-social-label">Follow us on our social networks:</p>
+          <ul class="contact-social-list">
+            <li>
+              <a
+                class="contact-social-link"
+                href="https://instagram.com/greenharvest"
+                target="_blank"
+                rel="noopener"
+                >Instagram</a
+              >
+            </li>
+            <li><span class="contact-social-divider">/</span></li>
+            <li>
+              <a
+                class="contact-social-link"
+                href="https://facebook.com/greenharvest"
+                target="_blank"
+                rel="noopener"
+                >Facebook</a
+              >
+            </li>
+            <li><span class="contact-social-divider">/</span></li>
+            <li>
+              <a
+                class="contact-social-link"
+                href="https://youtube.com/@greenharvest"
+                target="_blank"
+                rel="noopener"
+                >YouTube</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
     </main>
 
     <footer class="footer">
   <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+    <div class="footer-top">
+      <!-- Лого + описание -->
+      <div class="footer-brand">
+        <a href="./" class="logo footer-logo">
+          <img
+            src="data:image/webp;base64,UklGRvYCAABXRUJQVlA4WAoAAAAQAAAApwAADwAAQUxQSKECAAABoFXbVh3bmhJwEBycOAgOqhwkDigHlIMcB0jIdYCESFgSkDA+WGTf93dETEADC/E2O/U2u3f9bwXYDsBUgfp/K3zvTq9JUjb3vnZJNleyadXb7A5DNvNOa040y85vs93J5t7XHsy+3h/WZHMpfG+4a9TbHkoGxATcKsDprAa9A1+pMK8ScyWmTQdwDgW8inlQhgiYU5h/Gz0MEXYxVzToHUgHD6W4bUHati1Ir30PQzRsk+IF70GS1htWQZGfYJM/kP6ag9ZJE0laDd6QhwJRUOSfkKWtY2FZlhOWZVmkkFKUQoxBDytESQqdNtMbXn9BxcJfYuwn7ZEO2DptMKoeVQiScq1BUgG5Bqwy6OEAPsNNkxuW5cEHoqCmMQ45jWFYO+dP4pi8A2KC9KhCLLBKCbahpjGqgO1R0wcAWwRYKlAHqJKSO5RSygVFYroP/jIsH0jPHg6NKjVOr5RSGj0rdIpUMQ3+rtAA7pr+PriD26KGu45puOoYHF1YeNTreDkRNinTg+O2IKnSFWB37jomSa9qAOcPKtxRBhY+QB6MW1IppdGHfd+z0ZwiP8Em3wmd85FpjE6F1toNxdn3PXeapATpgOgUPV6zQXr2fFkWjQWSxkobJOkN6a/RG64/KTLvjiRlSJIatXHpB2CSdMD+LJVSoo5S3gq5lDgEw3Yp/IZ9FqAOZ3SHPboTXQAKpaSfHPBrWZblBa/ZCqekTIeXd0ZXDb5SuGB7BnAmoCsD16DVAAOKZjL6MB18mwUbIpSfGFXuTZupY5JCB5M3XaIBBhT9rA6oAM1RzDfYtUnKZs7HbJfNtdq06WU2KJmZolnWac0zy2+zzfuYrdnM+ZglScUsOzZfFMsNvW0as9mTc3Xyk/+judYaVWrNimet6f8LAFZQOCAuAAAAcAMAnQEqqAAQAD6RSJ9MJaQioiLoALASCWkAABZyaLaCkkLAAP738IHvIYAAAA=="
+            alt="GreenHarvest-logo"
+            width="180"
+            height="20"
+          />
+        </a>
+        <p class="footer-desc">
+          Whether you're looking for a healthy snack or a thoughtful gift, our
+          fruit baskets are the perfect choice.
+        </p>
+      </div>
+
+      <!-- Навигация -->
+      <nav class="footer-nav">
+        <ul class="footer-nav-list">
+          <li><a class="footer-nav-link" href="#order">How It Works</a></li>
+          <li><a class="footer-nav-link" href="#vegetables">Vegetables</a></li>
+          <li><a class="footer-nav-link" href="#reviews">Reviews</a></li>
+        </ul>
+      </nav>
+
+      <!-- Контакты -->
+      <div class="footer-contacts">
+        <a class="footer-phone" href="tel:+380684439426">+380 (68) 443-94-26</a>
+        <address class="footer-address">
+          1678 S. Pioneer Road Salt Lake City UT 84104
+        </address>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <ul class="footer-legal">
+        <li><a class="footer-legal-link" href="#">Privacy Policy</a></li>
+        <li><span class="footer-legal-divider">/</span></li>
+        <li><a class="footer-legal-link" href="#">Cookie settings</a></li>
+      </ul>
+      <p class="footer-copy">©Green Harvest 2023</p>
+    </div>
   </div>
 </footer>
+
+    <div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu-backdrop" id="mobile-menu-backdrop"></div>
+
+  <div class="mobile-menu-panel">
+    <button
+      class="mobile-menu-close"
+      type="button"
+      aria-label="Закрити меню"
+      id="mobile-menu-close"
+    >
+      <svg width="32" height="32" fill="none" stroke="#fbfbfb">
+        <use href="/GreenHarvest-project-Vite-Alexander/assets/icons-Bc0hXAbD.svg#icon-Close"></use>
+      </svg>
+    </button>
+
+    <nav class="mobile-nav">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link" href="#order">How It Works</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link" href="#vegetables">Vegetables</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link" href="#reviews">Reviews</a>
+        </li>
+      </ul>
+      <button type="button" class="mobile-menu-btn">Shop now</button>
+    </nav>
+  </div>
+</div>
 
 
   </body>
