@@ -143,8 +143,8 @@
   }
   .order-image-wrap {
     padding: 100px 64px;
-    max-width: 768px;
-    margin: 0 auto;
+    max-width: 100%; /* убираем ограничение */
+    margin: 0;
     overflow: hidden;
   }
 
