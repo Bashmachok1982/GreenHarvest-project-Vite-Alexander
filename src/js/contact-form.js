@@ -28,7 +28,6 @@ function clearState(input) {
 }
 
 // ── Валидация одного поля ────────────────────────────────
-// Проверяет каждое поле по своим правилам:
 // name    — минимум 2 символа
 // email   — корректный формат
 // comment — минимум 10 символов
@@ -59,8 +58,8 @@ function validateField(input) {
   return true;
 }
 
-// ── Проверка всей формы для кнопки ──────────────────────
-// Кнопка активна только если все поля валидны
+// ── Проверка всей формы — управляет классом кнопки ───────
+// Кнопка визуально неактивна пока все поля не валидны
 function checkFormValidity() {
   const allValid = [...inputs].every(input => {
     const value = input.value.trim();
@@ -71,12 +70,12 @@ function checkFormValidity() {
     return true;
   });
 
-  btn.disabled = !allValid;
+  // Управляем только классом — не disabled атрибутом
+  btn.classList.toggle('contact-btn--disabled', !allValid);
 }
 
 // ── Live валидация при вводе и уходе с поля ──────────────
 inputs.forEach(input => {
-  // При вводе — проверяем если есть текст, иначе сбрасываем
   input.addEventListener('input', () => {
     if (input.value.trim()) {
       validateField(input);
@@ -86,7 +85,6 @@ inputs.forEach(input => {
     checkFormValidity();
   });
 
-  // При уходе с поля — всегда валидируем
   input.addEventListener('blur', () => {
     validateField(input);
     checkFormValidity();
@@ -97,7 +95,22 @@ inputs.forEach(input => {
 form.addEventListener('submit', e => {
   e.preventDefault();
 
-  // Финальная проверка всех полей перед отправкой
+  // Если кнопка неактивна — показываем ошибку и выходим
+  if (btn.classList.contains('contact-btn--disabled')) {
+    iziToast.error({
+      title: 'Error',
+      message: 'Please fill in all fields correctly.',
+      position: 'topRight',
+      timeout: 4000,
+      backgroundColor: '#e74a3b',
+      titleColor: '#fbfbfb',
+      messageColor: '#fbfbfb',
+      iconColor: '#fbfbfb',
+    });
+    return;
+  }
+
+  // Финальная проверка всех полей
   const allValid = [...inputs].every(input => validateField(input));
 
   if (!allValid) {
@@ -106,7 +119,7 @@ form.addEventListener('submit', e => {
       message: 'Please fill in all fields correctly.',
       position: 'topRight',
       timeout: 4000,
-      backgroundColor: '#7a3145',
+      backgroundColor: '#e74a3b',
       titleColor: '#fbfbfb',
       messageColor: '#fbfbfb',
       iconColor: '#fbfbfb',
@@ -120,14 +133,14 @@ form.addEventListener('submit', e => {
     message: 'Your message has been sent! We will contact you soon.',
     position: 'topRight',
     timeout: 5000,
-    backgroundColor: '#576f35',
+    backgroundColor: '#3cbc81',
     titleColor: '#fbfbfb',
     messageColor: '#fbfbfb',
     iconColor: '#fbfbfb',
   });
 
-  // Сброс формы и состояний полей
+  // Сброс формы, состояний и возврат кнопки в неактивный вид
   form.reset();
   inputs.forEach(clearState);
-  btn.disabled = true; // снова делаем кнопку неактивной
+  btn.classList.add('contact-btn--disabled');
 });

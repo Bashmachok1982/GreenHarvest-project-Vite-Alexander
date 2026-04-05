@@ -133,6 +133,13 @@
     row-gap: 24px;
     column-gap: 28px;
   }
+  .vegetables-list {
+    justify-content: center;
+  }
+
+  .vegetables-card {
+    width: calc((100% - 28px) / 2);
+  }
 }
 
 @media screen and (min-width: 1280px) {

@@ -162,7 +162,7 @@
 .contact-btn:disabled {
   background: #d4bfc4;
   cursor: not-allowed;
-  pointer-events: none;
+  pointer-events: auto; /* важно — оставляем клики */
 }
 
 /* Hover — только если не disabled */
