@@ -1,0 +1,161 @@
+/* ═══════════════════════════════════════════════════════════
+   HERO
+   Mobile/Tablet : контент → картинка на всю ширину экрана
+   Desktop ≥1280 : контент слева (640px) | картинка справа (640px fixed)
+   ═══════════════════════════════════════════════════════════ */
+
+.hero {
+  background-color: #576f35;
+  overflow: hidden;
+}
+
+/* ── MOBILE ─────────────────────────────────────────────── */
+.hero .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-content {
+  padding-top: 100px; /* отступ под хедер */
+  padding-bottom: 32px;
+}
+
+.hero-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fbfbfb;
+  margin: 0 0 20px 0;
+  max-width: 335px;
+}
+
+.hero-text {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  color: #fbfbfb;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.42857;
+  max-width: 335px;
+}
+
+/* Картинка — на всю ширину экрана, выходит за контейнер */
+.hero-image {
+  /* Выходим за padding контейнера в обе стороны */
+  /* margin-left: calc(-1 * var(--container-padding, 20px));
+  margin-right: calc(-1 * var(--container-padding, 20px));
+  width: calc(100% + var(--container-padding, 20px) * 2); */
+  height: 320px;
+  width: 100%;
+  background-image: url('../img/webp/hero/hero-mobile-1x.webp');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+@media (min-resolution: 192dpi) and (max-width: 767px) {
+  .hero-image {
+    background-image: url('../img/webp/hero/hero-mobile-2x.webp');
+  }
+}
+
+/* ── TABLET 768px ───────────────────────────────────────── */
+@media screen and (min-width: 768px) {
+  .hero-content {
+    padding-top: 108px;
+    padding-bottom: 40px;
+  }
+
+  .hero-title {
+    margin-bottom: 24px;
+    font-size: 76px;
+    max-width: 704px;
+  }
+
+  .hero-text {
+    max-width: 603px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .hero-image {
+    height: 480px;
+    background-image: url('../img/webp/hero/hero-tablet-1x.webp');
+    background-position: center center;
+    /* контейнер на планшете обычно 40px padding с каждой стороны */
+    margin-left: -40px;
+    margin-right: -40px;
+    width: calc(100% + 80px);
+  }
+}
+
+@media (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1279px) {
+  .hero-image {
+    background-image: url('../img/webp/hero/hero-tablet-2x.webp');
+  }
+}
+
+/* ── DESKTOP 1280px ─────────────────────────────────────── */
+@media screen and (min-width: 1280px) {
+  .hero {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* Картинка — абсолютная, фикс 640px, правый край */
+  .hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*width: 640px; /* фиксированная ширина */
+    width: 50%;      /* всегда половина */
+    height: 100%;
+    margin: 0; /* сбрасываем мобильные марджины */
+    background-image: url('../img/webp/hero/hero-desktop-1x.webp');
+    background-position: center center;
+    background-size: cover;
+  }
+
+  /* Container — левые 640px, контент не заходит на картинку */
+  .hero .container {
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    /* Ограничиваем ширину контейнера левой половиной */
+    max-width: 640px;
+    margin: 0;
+    padding-left: 80px;
+    padding-right: 40px;
+  }
+
+  .hero-content {
+    padding-top: 120px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .hero-title {
+    margin-bottom: 0;
+    font-size: 76px;
+    max-width: 504px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+    max-width: 472px;
+    padding-bottom: 80px;
+    font-weight: 500;
+  }
+}
+
+@media (min-resolution: 192dpi) and (min-width: 1280px) {
+  .hero-image {
+    background-image: url('../img/webp/hero/hero-desktop-2x.webp');
+  }
+}

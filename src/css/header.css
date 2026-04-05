@@ -1,44 +1,169 @@
+/* ─── HEADER ─────────────────────────────────────────────── */
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
   padding: 20px 0;
 }
-.nav {
+
+.header .container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
-.nav-logo {
-  display: inline-flex;
+
+/* ─── NAV (только десктоп) ────────────────────────────────── */
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.main-nav-item {
+  border: 1px solid #fbfbfb;
+  border-radius: 12px;
+  padding: 0 12px;
+  width: 118px;
+  height: 44px;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
-.nav-list {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
-}
-.nav-link {
-  position: relative;
-  display: block;
+
+.main-nav-link {
+  font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: 200ms ease-in;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #fbfbfb;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+  position: relative;
 }
-.nav-link:hover,
-.nav-link:focus {
-  color: #747bff;
-}
-.nav-link::after {
+.main-nav-link::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(100%);
-  width: 110%;
-  height: 4px;
-  border-radius: 4px;
-  transform-origin: center;
-  animation: stretch 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 200ms both;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #fbfbfb;
+  transition: width 0.3s ease;
 }
-.nav-link.active::after {
-  background: #747bff;
+
+.main-nav-link:hover::after {
+  width: 100%;
+}
+
+.main-nav-link:hover {
+  opacity: 0.75;
+}
+
+/* ─── CTA BUTTON ──────────────────────────────────────────── */
+.header-btn {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.11111;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fbfbfb;
+  text-align: center;
+  background: #7a3145;
+  border: none;
+  border-radius: 30px;
+  padding: 16px 32px;
+  width: 157px;
+  height: 52px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background 0.25s ease,
+    transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.header-btn:hover {
+  background: #8f3a52;
+  transform: translateY(-1px);
+}
+.header-btn:active {
+  transform: translateY(0);
+  background: #6a2a3a;
+}
+
+/* ─── BURGER ──────────────────────────────────────────────── */
+.burger-menu-button {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0; /* убирает лишний отступ под svg */
+}
+
+.burger-menu-icon-close {
+  display: none;
+}
+
+/* Активное состояние */
+.burger-menu-button.is-open .burger-menu-icon-burger {
+  display: none;
+}
+
+.burger-menu-button.is-open .burger-menu-icon-close {
+  display: block;
+}
+
+/* ─── MOBILE < 768px ──────────────────────────────────────── */
+@media (max-width: 767px) {
+  .main-nav {
+    display: none;
+  }
+
+  .burger-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ─── TABLET 768px–1279px ─────────────────────────────────── */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .main-nav {
+    display: none;
+  }
+
+  .burger-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ─── DESKTOP ≥ 1280px ────────────────────────────────────── */
+@media (min-width: 1280px) {
+  .main-nav {
+    display: flex;
+  }
+
+  .burger-menu-button {
+    display: none;
+  }
 }

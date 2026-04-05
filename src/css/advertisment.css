@@ -1,0 +1,33 @@
+.advertisment {
+  background: #fbfbfb;
+  padding: 100px 0;
+}
+.advertisment-title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.08333;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #141414;
+  max-width: 335px;
+}
+.advertisment-span {
+  color: #fbfbfb;
+  background: #576f35;
+  border-radius: 12px;
+  width: 335px;
+  height: 102px;
+}
+@media screen and (min-width: 768px) {
+  .advertisment-title {
+    max-width: 704px;
+    font-size: 64px;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .advertisment-title {
+    max-width: 1054px;
+    font-size: 76px;
+  }
+}

@@ -1,19 +1,44 @@
 <header class="header">
   <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+    <a href="./" class="logo">
+      <img
+        src="/img/logo.webp"
+        alt="GreenHarvest-logo"
+        width="216"
+        height="20"
+      />
+    </a>
+
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li class="main-nav-item">
+          <a class="main-nav-link" href="#order">How It Works</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        <li class="main-nav-item">
+          <a class="main-nav-link" href="#vegetables">Vegetables</a>
+        </li>
+        <li class="main-nav-item">
+          <a class="main-nav-link" href="#reviews">Reviews</a>
         </li>
       </ul>
+      <a href="#contact" class="header-btn">Shop now</a>
     </nav>
+
+    <button
+      class="burger-menu-button"
+      type="button"
+      aria-label="Відкрити меню навігації"
+      id="burger-menu-button"
+    >
+      <svg
+        class="burger-menu-icon burger-menu-icon-burger"
+        width="32"
+        height="32"
+        fill="none"
+        stroke="#fbfbfb"
+      >
+        <use href="/img/icons.svg#icon-Burger"></use>
+      </svg>
+    </button>
   </div>
 </header>

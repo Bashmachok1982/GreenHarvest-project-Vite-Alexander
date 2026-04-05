@@ -1,0 +1,354 @@
+/* ═══════════════════════════════════════════════════════════
+   CONTACT SECTION
+   Mobile/Tablet : форма сверху, розовый блок снизу
+   Desktop       : форма слева, розовый блок справа
+   ═══════════════════════════════════════════════════════════ */
+
+.contact {
+  background-color: #576f35;
+  padding: 60px 0;
+}
+
+/* ── ЗАГОЛОВОК ──────────────────────────────────────────── */
+.contact-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.08333;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fbfbfb;
+  margin: 0 0 20px 0;
+}
+
+.contact-title-accent {
+  color: #d4bfc4;
+}
+
+.contact-text {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #fbfbfb;
+  margin: 0 0 40px 0;
+  max-width: 335px;
+}
+
+/* ── ОБЁРТКА двух блоков ────────────────────────────────── */
+.contact-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── БЕЛЫЙ БЛОК — ФОРМА ─────────────────────────────────── */
+.contact-form-wrap {
+  background: #fbfbfb;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 30px;
+  padding: 40px 20px;
+  width: 335px;
+  height: 552px;
+}
+
+.contact-form-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.contact-form-accent-red {
+  color: #7a3145;
+}
+
+.contact-form-accent-green {
+  color: #576f35;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-input {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+  background: #fbfbfb;
+  resize: none; /* textarea не растягивается */
+  outline: none;
+  transition: border-color 0.2s ease;
+  overflow: hidden; /* нет скроллбара у textarea */
+  box-sizing: border-box;
+  border: 1px solid #858585;
+  border-radius: 30px;
+  padding: 14px 120px 14px 16px;
+  width: 295px;
+  height: 48px;
+}
+/* Success — зелёная обводка */
+.contact-input--success {
+  border-color: #576f35;
+  outline: none;
+}
+
+/* Error — красная обводка */
+.contact-input--error {
+  border-color: #e74c3c;
+  outline: none;
+}
+
+/* Focus — зелёная обводка (уже есть, дублируем для ясности) */
+.contact-input:focus {
+  border-color: #7a3145;
+}
+
+.contact-input::placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.42857;
+  text-align: start;
+  color: #141414;
+}
+
+.contact-textarea {
+  border: 1px solid #858585;
+  border-radius: 15px;
+  padding: 14px 120px 59px 16px;
+  width: 295px;
+  height: 92px;
+}
+
+.contact-btn {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fbfbfb;
+  background: #7a3145;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.25s ease;
+  margin-top: 20px;
+  border-radius: 30px;
+  padding: 16px 129px;
+  width: 295px;
+  height: 52px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.11111;
+  letter-spacing: -0.01em;
+}
+
+.contact-btn:hover {
+  background: #8f3a52;
+}
+/* Default — активная */
+.contact-btn {
+  background: #7a3145;
+  cursor: pointer;
+}
+
+/* Disabled — пока форма не заполнена */
+.contact-btn:disabled {
+  background: #d4bfc4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Hover — только если не disabled */
+.contact-btn:not(:disabled):hover {
+  background: #8f3a52;
+}
+/* ── РОЗОВЫЙ БЛОК — ФОТО + СОЦСЕТИ ─────────────────────── */
+.contact-social-wrap {
+  background: #7a3145;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 30px;
+  padding: 40px 20px;
+  width: 335px;
+  height: 456px;
+}
+
+.contact-social-img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-social-label {
+  font-family: 'Inter Tight', sans-serif;
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #d4bfc4;
+}
+
+.contact-social-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.contact-social-link {
+  font-family: 'Inter Tight', sans-serif;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.11111;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fbfbfb;
+}
+
+.contact-social-link:hover {
+  opacity: 0.7;
+}
+
+.contact-social-divider {
+  color: #fbfbfb;
+  opacity: 0.5;
+}
+
+/* ── TABLET 768px ───────────────────────────────────────── */
+@media screen and (min-width: 768px) {
+  .contact {
+    padding: 80px 0;
+  }
+  .contact-form-wrap {
+    border-radius: 30px;
+    padding: 72px 100px;
+    width: 640px;
+    height: 632px;
+  }
+
+  .contact-title {
+    font-size: 64px;
+  }
+
+  .contact-text {
+    font-size: 16px;
+    line-height: 1.25;
+    color: #fbfbfb;
+    margin-bottom: 52px;
+    max-width: 640px;
+  }
+
+  .contact-form-title {
+    font-size: 32px;
+  }
+  .contact-input {
+    width: 440px;
+    height: 52px;
+  }
+  .contact-btn {
+    width: 440px;
+    height: 52px;
+  }
+  .contact-social-wrap {
+    border-radius: 30px;
+    padding: 52px;
+    width: 640px;
+    height: 528px;
+  }
+  .contact-social-label {
+    margin: 0;
+    color: #d4bfc4;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+  .contact-social-link {
+    font-family: 'Inter Tight', sans-serif;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    text-transform: uppercase;
+    color: #fbfbfb;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.11111;
+    letter-spacing: -0.01em;
+  }
+  .contact-social {
+    gap: 16px;
+  }
+}
+
+/* ── DESKTOP 1280px ─────────────────────────────────────── */
+@media screen and (min-width: 1280px) {
+  .contact {
+    padding: 100px 0;
+  }
+
+  .contact-title {
+    font-size: 64px;
+    margin-bottom: 24px;
+  }
+
+  .contact-text {
+    max-width: 740px;
+  }
+
+  .contact-wrap {
+    flex-direction: row;
+    gap: 32px;
+    align-items: stretch;
+  }
+
+  /* Оба блока — по 50% */
+  .contact-form-wrap {
+    padding: 52px 48px;
+    width: 524px;
+    height: 592px;
+  }
+
+  .contact-social-wrap {
+    padding: 52px 48px;
+    width: 524px;
+    height: 592px;
+  }
+
+  .contact-social-img {
+    flex: 1;
+    height: 352px;
+    object-fit: cover;
+  }
+  .contact-form-title {
+    max-width: 428px;
+  }
+
+  .contact-social-link {
+    font-size: 18px;
+  }
+  .contact-input {
+    width: 428px;
+  }
+  .contact-btn {
+    width: 428px;
+  }
+}

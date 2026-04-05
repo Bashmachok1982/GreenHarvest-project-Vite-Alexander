@@ -1,0 +1,148 @@
+/* ═══════════════════════════════════════════════════════════
+   MOBILE MENU
+   Mobile  < 768px : панель на всю ширину (100%)
+   Tablet  ≥ 768px : панель 351px, справа, бекдроп слева
+   ═══════════════════════════════════════════════════════════ */
+
+.mobile-menu {
+  display: none; /* скрыто по умолчанию */
+  position: fixed;
+  inset: 0;
+  z-index: 1001;
+}
+
+/* Активное состояние */
+.mobile-menu.is-open {
+  display: flex;
+}
+
+/* ── БЕКДРОП (только планшет) ───────────────────────────── */
+.mobile-menu-backdrop {
+  display: none;
+  flex: 1;
+  background: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+/* ── ПАНЕЛЬ ─────────────────────────────────────────────── */
+.mobile-menu-panel {
+  position: relative;
+  width: 100%;
+  background: #576f35;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ── КНОПКА ЗАКРЫТЬ ─────────────────────────────────────── */
+.mobile-menu-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0;
+  transition: opacity 0.2s ease;
+}
+
+.mobile-menu-close:hover {
+  opacity: 0.7;
+}
+
+/* ── NAV ────────────────────────────────────────────────── */
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  align-items: center;
+  justify-content: center; /* список по центру */
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.mobile-nav-item {
+  border: 1px solid #fbfbfb;
+  border-radius: 12px;
+  width: 210px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.mobile-nav-item:hover {
+  background: #fbfbfb;
+}
+
+.mobile-nav-link {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #fbfbfb;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.mobile-nav-item:hover .mobile-nav-link {
+  color: #576f35;
+}
+
+/* ── CTA BUTTON ─────────────────────────────────────────── */
+.mobile-menu-btn {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.11;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fbfbfb;
+  background: #7a3145;
+  border: none;
+  border-radius: 30px;
+  padding: 16px 32px;
+  width: 210px;
+  height: 52px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.25s ease;
+  position: absolute;
+  bottom: 40px; /* кнопка внизу */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mobile-menu-btn:hover {
+  background: #8f3a52;
+}
+
+/* ── TABLET ≥ 768px ─────────────────────────────────────── */
+@media screen and (min-width: 768px) {
+  .mobile-menu-backdrop {
+    display: block; /* бекдроп появляется */
+  }
+
+  .mobile-menu-panel {
+    width: 351px;
+    flex-shrink: 0;
+  }
+  /* .mobile-menu.is-open ~ * .burger-menu-button,
+  body.menu-open .burger-menu-button {
+    visibility: hidden;
+  } */
+}

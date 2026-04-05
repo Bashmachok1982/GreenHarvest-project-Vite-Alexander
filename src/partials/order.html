@@ -1,0 +1,77 @@
+<section class="order" id="order">
+  <!-- Розовый блок с картинкой -->
+  <div class="order-image-wrap">
+    <picture>
+      <!-- Desktop ≥ 1280px -->
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          /img/webp/order/order-desktop-1x.webp 1x,
+          /img/webp/order/order-desktop-2x.webp 2x
+        "
+      />
+      <!-- Tablet 768–1279px -->
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          /img/webp/order/order-tablet-1x.webp 1x,
+          /img/webp/order/order-tablet-2x.webp 2x
+        "
+      />
+      <!-- Mobile — fallback -->
+      <img
+        class="order-image"
+        src="/img/webp/order/order-mobile-1x.webp"
+        srcset="
+          /img/webp/order/order-mobile-1x.webp 1x,
+          /img/webp/order/order-mobile-2x.webp 2x
+        "
+        alt="Woman preparing vegetables"
+        loading="lazy"
+      />
+    </picture>
+  </div>
+
+  <!-- Зелёный блок с контентом -->
+  <div class="order-content-wrap">
+    <div class="container">
+      <div class="order-content">
+        <h2 class="order-title">
+          To order your
+          <span class="order-title-accent">vegetable</span>
+          basket, simply follow these
+          <span class="order-title-accent">easy steps</span>
+        </h2>
+
+        <p class="order-text">
+          Our baskets are assembled with care and delivered straight to your
+          doorstep, so you can enjoy the taste of fresh fruit without ever
+          leaving your home.
+        </p>
+
+        <ul class="order-steps">
+          <li class="order-step">
+            <div class="order-step-number">1</div>
+            <p class="order-step-text">
+              Just choose <strong>the vegetable</strong> you want to order by
+              clicking on the checkboxes <strong>next to it.</strong>
+            </p>
+          </li>
+          <li class="order-step">
+            <div class="order-step-number">2</div>
+            <p class="order-step-text">
+              Click on <strong>the basket</strong> and fill out the form.
+            </p>
+          </li>
+          <li class="order-step">
+            <div class="order-step-number">3</div>
+            <p class="order-step-text">
+              Sit back and relax! Your <strong>fresh vegetables</strong> basket
+              will be delivered.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

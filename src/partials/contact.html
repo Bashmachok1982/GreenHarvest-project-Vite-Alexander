@@ -1,0 +1,122 @@
+<section class="contact" id="contact">
+  <div class="container">
+    <h2 class="contact-title">
+      Fresh <span class="contact-title-accent">harvest</span> box<br />
+      has got you covered
+    </h2>
+
+    <p class="contact-text">
+      Our boxes are packed with delicious, nutritious vegetables, perfect for
+      anyone looking to eat healthier or support local farmers. Order your box
+      today and start enjoying the best that nature has to offer!
+    </p>
+
+    <div class="contact-wrap">
+      <!-- Белый блок — форма -->
+      <div class="contact-form-wrap">
+        <p class="contact-form-title">
+          Ordering <span class="contact-form-accent-red">from us</span> is quick
+          and easy! Fill out
+          <span class="contact-form-accent-green">the form</span>
+          below and we will contact you!
+        </p>
+
+        <form class="contact-form" action="#" method="post">
+          <input
+            class="contact-input"
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            minlength="2"
+            maxlength="50"
+            pattern="[A-Za-zА-Яа-яІіЇїЄє\s'-]+"
+            required
+          />
+          <input
+            class="contact-input"
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            class="contact-input contact-textarea"
+            name="comment"
+            placeholder="Comment"
+            minlength="10"
+            maxlength="500"
+          ></textarea>
+          <button class="contact-btn" type="submit" disabled>Send</button>
+        </form>
+      </div>
+
+      <!-- Розовый блок — фото + соцсети -->
+      <div class="contact-social-wrap">
+        <picture>
+          <!-- Desktop ≥ 1280px -->
+          <source
+            media="(min-width: 1280px)"
+            srcset="
+              /img/webp/contact/contact-desktop-1x.webp 1x,
+              /img/webp/contact/contact-desktop-2x.webp 2x
+            "
+          />
+          <!-- Tablet 768–1279px -->
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              /img/webp/contact/contact-tablet-1x.webp 1x,
+              /img/webp/contact/contact-tablet-2x.webp 2x
+            "
+          />
+          <!-- Mobile — fallback -->
+          <img
+            class="contact-image"
+            src="/img/webp/contact/contact-mobile-1x.webp"
+            srcset="
+              /img/webp/contact/contact-mobile-1x.webp 1x,
+              /img/webp/contact/contact-mobile-2x.webp 2x
+            "
+            alt="Woman preparing vegetables"
+            loading="lazy"
+          />
+        </picture>
+
+        <div class="contact-social">
+          <p class="contact-social-label">Follow us on our social networks:</p>
+          <ul class="contact-social-list">
+            <li>
+              <a
+                class="contact-social-link"
+                href="https://instagram.com/greenharvest"
+                target="_blank"
+                rel="noopener"
+                >Instagram</a
+              >
+            </li>
+            <li><span class="contact-social-divider">/</span></li>
+            <li>
+              <a
+                class="contact-social-link"
+                href="https://facebook.com/greenharvest"
+                target="_blank"
+                rel="noopener"
+                >Facebook</a
+              >
+            </li>
+            <li><span class="contact-social-divider">/</span></li>
+            <li>
+              <a
+                class="contact-social-link"
+                href="https://youtube.com/@greenharvest"
+                target="_blank"
+                rel="noopener"
+                >YouTube</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,21 +1,241 @@
+/* ═══════════════════════════════════════════════════════════
+   FOOTER
+   Mobile  : всё в колонку
+   Tablet  : лого+описание слева | нав+контакты справа
+   Desktop : три колонки
+   ═══════════════════════════════════════════════════════════ */
+
 .footer {
-  padding: 20px 0;
+  background-color: #7a3145;
+  padding: 40px 0 0;
 }
+
+/* ── TOP ────────────────────────────────────────────────── */
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+/* ── БРЕНД ──────────────────────────────────────────────── */
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
 .footer-desc {
-  text-align: center;
+  font-family: 'Inter Tight', sans-serif;
+  margin: 0;
+  max-width: 280px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #fbfbfb;
 }
-.footer-link {
+
+/* ── НАВ ────────────────────────────────────────────────── */
+.footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav-link {
+  font-family: 'Inter Tight', sans-serif;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fbfbfb;
   position: relative;
 }
-.footer-link::before {
+.footer-nav-link::after {
   content: '';
   position: absolute;
-  bottom: 6%;
-  left: 50%;
-  transform: translateX(-50%) skewX(-12deg);
-  z-index: -1;
-  width: 110%;
-  height: 24%;
-  background-color: #41d1ff;
-  transition: 200ms ease;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #fbfbfb;
+  transition: width 0.3s ease;
+}
+
+.footer-nav-link:hover::after {
+  width: 100%;
+}
+
+.footer-nav-link:hover {
+  opacity: 0.7;
+}
+
+/* ── КОНТАКТЫ ───────────────────────────────────────────── */
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-phone {
+  font-family: 'Inter Tight', sans-serif;
+  color: #fbfbfb;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #fbfbfb;
+}
+
+.footer-phone:hover {
+  opacity: 0.7;
+}
+
+.footer-address {
+  font-family: 'Inter Tight', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #fbfbfb;
+}
+
+/* ── BOTTOM ─────────────────────────────────────────────── */
+.footer-bottom {
+  border-top: 1px solid rgba(251, 251, 251, 0.2);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-legal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-legal-link {
+  font-family: 'Inter Tight', sans-serif;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #d4bfc4;
+}
+
+.footer-legal-link:hover {
+  opacity: 0.7;
+}
+
+.footer-legal-divider {
+  color: rgba(251, 251, 251, 0.5);
+}
+
+.footer-copy {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(251, 251, 251, 0.6);
+  margin: 0;
+}
+
+/* ── TABLET 768px ───────────────────────────────────────── */
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 48px 0 0;
+  }
+
+  .footer-top {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .footer-brand {
+    flex: 0 0 45%;
+  }
+
+  .footer-nav {
+    flex: 0 0 auto;
+  }
+
+  .footer-contacts {
+    flex: 0 0 auto;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-desc {
+    font-family: 'Inter Tight', sans-serif;
+    margin: 0;
+    max-width: 280px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+  .footer-phone {
+    font-family: 'Inter Tight', sans-serif;
+    color: #fbfbfb;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    font-size: 16px;
+  }
+  .footer-address {
+    font-family: 'Inter Tight', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+  }
+  .footer-legal-link {
+    font-family: 'Inter Tight', sans-serif;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    font-size: 16px;
+  }
+}
+
+/* ── DESKTOP 1280px ─────────────────────────────────────── */
+@media screen and (min-width: 1280px) {
+  .footer {
+    padding: 60px 0 0;
+  }
+
+  .footer-top {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    flex: 0 0 280px;
+  }
+
+  .footer-nav {
+    flex: 0 0 auto;
+  }
+
+  .footer-nav-link {
+    font-size: 28px;
+  }
+
+  .footer-contacts {
+    flex: 0 0 auto;
+    align-items: flex-start;
+  }
 }
